@@ -40,7 +40,7 @@ p{
 .container{
     border-radius: 30px;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 40px;
@@ -121,10 +121,17 @@ p{
 
 
 /* media - queries */
+@media screen and (max-width: 950px) {
+    .container{
+        width: 70vw;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .container{
         padding: 20px 20px 20px 30px;
         gap: 20px;
+        width: 70vw;
     }
 
     h1{
@@ -158,19 +165,19 @@ p{
     #search-icon {
         width: 20%;
     }
-
-    .container{
-        width: 60vw;;
-    }
-
+    
     .weather-info{
         flex-direction: column;
         padding-bottom: 10px;
     }
-
+    
     .description{
         align-items: center;
     }
 }
 
-
+@media screen and (max-width: 360px) {
+    .container{
+        width: 88vw;;
+    }
+}
