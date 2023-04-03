@@ -22,6 +22,7 @@ async function checkWeather(city) {
     errorMessage.classList.add("hidden");
 
     document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + " °C";
+    document.querySelector(".weather-condition").innerHTML = data.weather[0].description;
     document.querySelector(".city-name").innerHTML = data.name + ", " + data.sys.country;
     document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
     document.querySelector("#wind-speed").innerHTML = data.wind.speed + "km/h";
