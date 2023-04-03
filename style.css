@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    background-color: #4c5b61;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+::placeholder{
+    color: #fff;
+    opacity: 0.8;
+}
+
+.flex{
+    display: flex;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.container{
+    border-radius: 30px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(231, 231, 231, 0.3);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px;
+}
+
+/* Search Area */
+.search-area{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar{
+    border: 3px solid #fff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 60%;
+    background-color: inherit;
+    font-size: 1rem;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px;
+    cursor:default;
+}
+
+.search-bar:focus{
+    outline: none;
+}
+
+#search-icon {
+    cursor: pointer;
+}
+
+.error{
+    text-align: center;
+}
+
+
+/* weather info */
+.weather-info{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/* weather details */
+.weather-details{
+    justify-content: space-between;
+}
+
+.details-card{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.humidity, .wind{
+    /* align-items: center; */
+    gap: 10px;
+}
+
+.icon{
+    width: 30%;
+}
+
+.icon1{
+    width: 25%;
+}
+
+
+/* media - queries */
+@media screen and (max-width: 850px) {
+    .container{
+        padding: 20px 20px 20px 30px;
+        gap: 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+    .search-bar{
+        width: 80%;
+    }
+
+    #search-icon{
+        width: 15%;
+    }
+}
+
+
+
+@media screen and (max-width: 689px) {
+    p {
+        font-size: 1rem;
+    }
+
+    #search-icon {
+        width: 20%;
+    }
+
+    .container{
+        width: 60vw;;
+    }
+
+    .weather-info{
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    .description{
+        align-items: center;
+    }
+}
+
+
