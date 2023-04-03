@@ -39,3 +39,8 @@ async function checkWeather(city) {
 searchIcon.addEventListener("click", () => {
     checkWeather(city.value);
 });
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter")
+  checkWeather(city.value);
+});
