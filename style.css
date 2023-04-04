@@ -48,9 +48,19 @@ p{
     background-color: #fff;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px;
+}
+
+/* Typed top bar */
+.typed-top-bar{
+    width:100%;
+    color:#fff;
+    opacity: 0.9;
+    text-align: center;
+    padding-block: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.01));
 }
 
 /* Search Area */
@@ -60,15 +70,17 @@ p{
 }
 
 .search-bar{
-    border: 3px solid #fff;
-    border-radius: 30px;
-    padding: 10px 20px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    padding-bottom: 10px;
     width: 60%;
     background-color: inherit;
     font-size: 1rem;
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px;
-    cursor:default;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px; */
+    cursor:pointer;
 }
 
 .search-bar:focus{
@@ -77,10 +89,6 @@ p{
 
 #search-icon {
     cursor: pointer;
-}
-
-.error{
-    text-align: center;
 }
 
 
@@ -150,10 +158,6 @@ p{
     .search-bar{
         width: 80%;
     }
-
-    #search-icon{
-        width: 15%;
-    }
 }
 
 @media screen and (max-width: 689px) {
@@ -162,7 +166,7 @@ p{
     }
 
     #search-icon {
-        width: 20%;
+        width: 10%;
     }
     
     .weather-info{
@@ -172,6 +176,12 @@ p{
     
     .description{
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #search-icon {
+        width: 12%;
     }
 }
 

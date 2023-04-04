@@ -11,15 +11,17 @@
 </head>
 
 <body>
+    <div class="typed-top-bar">
+        <p><span class="typing-text"></span></p>
+    </div>
     <div class="container flex">
         <!-- search area -->
         <div class="search-area flex">
-            <input class="search-bar" type="search" placeholder="Enter City Name" spellcheck="false">
-            <img id="search-icon" src="assets/search.png" alt="search-icon" width="10%">
+            <input class="search-bar" type="search" placeholder="Enter A City Name" spellcheck="false">
+            <img id="search-icon" src="assets/search.png" alt="search-icon" width="7%">
         </div>
 
         <div class="error hidden">
-            Invalid City Name
         </div>
 
         <!-- weather information -->
@@ -51,6 +53,7 @@
         </div>
     </div>
     
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script src="app.js"></script>
 </body>
 
