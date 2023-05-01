@@ -3,4 +3,4 @@
 - This is a simple, responsive weather app.
 - This is build using ```HTML``` ```CSS``` and ```JAVASCRIPT```.
 
-![image](https://user-images.githubusercontent.com/90456532/231233558-47171e85-ae72-4526-a9c7-0131e2da159b.png)
+![image](https://user-images.githubusercontent.com/90456532/235414307-e39ac18a-69cb-46e8-aad2-a6de921ca434.png)
