@@ -78,7 +78,6 @@ p{
     background-color: inherit;
     font-size: 1rem;
     color: #fff;
-    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 30px 5px; */
     cursor:pointer;
 }
 
@@ -90,6 +89,16 @@ p{
     cursor: pointer;
 }
 
+/* #search-bar::-webkit-search-cancel-button { */
+    input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    background: url(assets/xmark-solid.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    filter: invert(1) sepia(1) saturate(4) hue-rotate(183deg);
+}
 
 /* weather info */
 .weather-info{
@@ -100,6 +109,7 @@ p{
 .description{
     flex-direction: column;
     align-items: flex-end;
+    text-align: right;
 }
 
 
@@ -125,7 +135,12 @@ p{
 
 .wind{
     justify-content: flex-end;
+    align-items: center;
     gap: 5px;
+}
+
+.wind img {
+    width: 10%;
 }
 
 .icon{
@@ -184,6 +199,7 @@ p{
     
     .description{
         align-items: center;
+        text-align:center;
     }
 }
 

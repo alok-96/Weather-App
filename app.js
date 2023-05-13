@@ -38,13 +38,28 @@ async function checkWeather(city) {
       data.name + ", " + data.sys.country;
     document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
     document.querySelector("#wind-speed").innerHTML = data.wind.speed + "km/h";
-    if (data.weather[0].main == "Clouds") weatherImg.src = "assets/clouds.png";
-    else if (data.weather[0].main == "Clear")
-      weatherImg.src = "assets/clear.png";
-    else if (data.weather[0].main == "Drizzle")
-      weatherImg.src = "assets/drizzle.png";
-    else if (data.weather[0].main == "Mist") weatherImg.src = "assets/mist.png";
-    else if (data.weather[0].main == "Rain") weatherImg.src = "assets/rain.png";
+
+    let today = new Date();
+    let hour = today.getHours();
+
+    if (data.weather[0].main == "Clouds") {
+      hour >= 6 && hour <= 18
+        ? (weatherImg.src = "assets/sun-clouds.png")
+        : (weatherImg.src = "assets/moon-clouds.png");
+    } else if (data.weather[0].main == "Clear") {
+      hour >= 6 && hour <= 18
+        ? (weatherImg.src = "assets/full-sun.png")
+        : (weatherImg.src = "assets/full-moon.png");
+    } else if (data.weather[0].main == "Drizzle") {
+      hour >= 6 && hour <= 18
+        ? (weatherImg.src = "assets/sun-drizzle.png")
+        : (weatherImg.src = "assets/night-drizzle.png");
+    } else if (data.weather[0].main == "Mist") {
+      hour >= 6 && hour <= 18
+        ? (weatherImg.src = "assets/sun-mist.png")
+        : (weatherImg.src = "assets/night-mist.png");
+    } else if (data.weather[0].main == "Rain")
+      weatherImg.src = "assets/rain.png";
     else if (data.weather[0].main == "Snow") weatherImg.src = "assets/snow.png";
   }
 }
